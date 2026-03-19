@@ -1,0 +1,6 @@
+Metric,Value
+Test RMSE,0.9135
+Test MAE,0.6869
+Correlation,0.5363
+Best Val RMSE,0.8617
+Total Parameters,"664,033"
