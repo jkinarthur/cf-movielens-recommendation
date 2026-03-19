@@ -76,8 +76,8 @@ This implementation adapts the NCF architecture proposed by [He et al. (2017)](h
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/yourusername/ncf-movielens-recommendation.git
-   cd ncf-movielens-recommendation
+   git clone https://github.com/jkinarthur/cf-movielens-recommendation.git
+   cd cf-movielens-recommendation
    ```
 
 2. **Create virtual environment**
