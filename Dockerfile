@@ -19,5 +19,5 @@ RUN chown -R appuser:appuser /app
 USER appuser
 
 # ── Expose and run ────────────────────────────────────────────────────────────
-EXPOSE 8000
-CMD ["uvicorn", "app:app", "--host", "0.0.0.0", "--port", "8000"]
+EXPOSE 10000
+CMD uvicorn app:app --host 0.0.0.0 --port ${PORT:-10000}
