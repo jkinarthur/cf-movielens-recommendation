@@ -1,0 +1,19 @@
+# render.yaml – Render.com deployment configuration
+# Deploy the NCF Movie Recommendation microservice as a web service.
+#
+# Steps:
+#   1. Push the repo (including model_artifacts.pt) to GitHub.
+#   2. On render.com → New → Web Service → connect your GitHub repo.
+#   3. Render will pick up this file automatically.
+
+services:
+  - type: web
+    name: ncf-movie-recommender
+    env: python
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn app:app --host 0.0.0.0 --port $PORT
+    healthCheckPath: /health
+    envVars:
+      - key: PYTHON_VERSION
+        value: "3.10.0"
