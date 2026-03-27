@@ -20,4 +20,4 @@ USER appuser
 
 # ── Expose and run ────────────────────────────────────────────────────────────
 EXPOSE 10000
-CMD uvicorn app:app --host 0.0.0.0 --port ${PORT:-10000}
+CMD ["sh", "-c", "python -m uvicorn app:app --host 0.0.0.0 --port ${PORT:-10000}"]
